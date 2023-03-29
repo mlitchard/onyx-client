@@ -21,6 +21,7 @@
                    [ "console"
                      "effect"
                      "prelude"
+		     "halogen"
                    ];
 
                  dir = ./.;
@@ -31,7 +32,6 @@
              { type = "app";
                program = "${packages.default}/bin/hello";
              };
-
            packages =
              with ps;
              { default = app { name = "hello"; };
@@ -41,10 +41,11 @@
 
            devShells.default =
              p.mkShell
-               { buildInputs =
+               { 
+	         buildInputs =
                    with p;
                    [ nodejs
-                     (ps.command {})
+                     (ps.command {bundle.esbuild.format = "iife";})
                      purs-nix.esbuild
                      purs-nix.purescript
                      ps-tools.for-0_15.purescript-language-server
