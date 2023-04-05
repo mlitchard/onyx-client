@@ -292,14 +292,14 @@
       "locked": {
         "lastModified": 1678310706,
         "narHash": "sha256-R3hMAQDw5H4C+7GLmQMTQ7jXms5RC3r5qoIMe2WuNqo=",
-        "owner": "ursi",
+        "owner": "mlitchard",
         "repo": "purs-nix",
         "rev": "4fc024079dbbf510e1d143e2c5bc73d5b518c802",
         "type": "github"
       },
       "original": {
-        "owner": "ursi",
-        "ref": "ps-0.15",
+        "owner": "mlitchard",
+        "ref": "master",
         "repo": "purs-nix",
         "type": "github"
       }

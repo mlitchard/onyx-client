@@ -1,7 +1,7 @@
 {
 
   inputs = {
-    purs-nix.url = "github:ursi/purs-nix/ps-0.15";
+    purs-nix.url = "github:mlitchard/purs-nix/master";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     utils.url = "github:numtide/flake-utils";
     ps-tools.follows = "purs-nix/ps-tools";
@@ -18,10 +18,14 @@
            ps =
              purs-nix.purs
                { dependencies =
-                   [ "console"
+                   [ "aff-coroutines"
+		     "arrays"
+		     "console"
+		     "coroutines"
                      "effect"
                      "prelude"
 		     "halogen"
+		     "web-socket"
                    ];
 
                  dir = ./.;
